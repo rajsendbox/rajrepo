@@ -1,0 +1,193 @@
+keycloak:
+  client: empower
+  scopes:
+    - name: GET
+      description: Read access.
+    - name: POST
+      description: Create access.
+    - name: PUT
+      description: Update access.
+    - name: DELETE
+      description: Delete access.
+    - name: PATCH
+      description: Partial Update access.
+
+  resources:
+    - name: /organizations/{org_id}/extension/trusted-domains
+      uris:
+        - /organizations/{org_id}/extension/trusted-domains
+      scopes:
+        - GET
+        - POST
+        - DELETE
+
+    - name: /organizations/{org_id}/extension/mmguard-config
+      uris:
+        - /organizations/{org_id}/extension/mmguard-config
+      scopes:
+        - GET
+        - POST
+        - DELETE
+
+    - name: /organizations/{org_id}/extension/token
+      uris:
+        - /organizations/{org_id}/extension/token
+      scopes:
+        - GET
+        - POST
+
+    - name: /organizations/{org_id}/extension/key-id
+      uris:
+          - /organizations/{org_id}/extension/key-id
+      scopes:
+          - GET
+
+  policies:
+    role_policies:
+      - name: ViewerRolePolicy
+        roles:
+          - client-role-viewer
+
+      - name: AnalystRolePolicy
+        roles:
+          - client-role-analyst
+
+      - name: DeploymentAdminRolePolicy
+        roles:
+          - client-role-deployment-admin
+
+      - name: OrgAdminRolePolicy
+        roles:
+          - client-role-org-admin
+
+      - name: OrgRootAdminRolePolicy
+        roles:
+          - client-role-org-root-admin
+
+      - name: BrowserUserRolePolicy
+        roles:
+          - client-role-browser-extension-user
+
+    custom_policies:
+      - name: OrganizationScopePolicy
+        type: Script-organization-policy.js
+
+  permissions:
+    # viewer
+    - name: ViewerPermission:organizations/{org_id}/extension/trusted-domains
+      resource: organizations/{org_id}/extension/trusted-domains
+      scopes:
+        - GET
+      policies:
+        - ViewerRolePolicy
+
+    - name: ViewerPermission:/organizations/{org_id}/extension/mmguard-config
+      resource: /organizations/{org_id}/extension/mmguard-config
+      scopes:
+        - GET
+      policies:
+        - ViewerRolePolicy
+
+    - name: ViewerPermission:/organizations/{org_id}/extension/token
+      resource: /organizations/{org_id}/extension/token
+      scopes:
+        - GET
+      policies:
+        - ViewerRolePolicy
+
+    - name: ViewerPermission:/organizations/{org_id}/extension/key-id
+      resource: /organizations/{org_id}/extension/key-id
+      scopes:
+        - GET
+      policies:
+        - ViewerRolePolicy
+
+
+    # analyst
+    - name: AnalystPermission:/organizations/{org_id}/extension/trusted-domains
+      resource: /organizations/{org_id}/extension/trusted-domains
+      scopes:
+        - GET
+      policies:
+        - AnalystRolePolicy
+
+    - name: AnalystPermission:/organizations/{org_id}/extension/mmguard-config
+      resource: /organizations/{org_id}/extension/mmguard-config
+      scopes:
+        - GET
+      policies:
+        - AnalystRolePolicy
+
+    - name: AnalystPermission:/organizations/{org_id}/extension/token
+      resource: /organizations/{org_id}/extension/token
+      scopes:
+        - GET
+      policies:
+        - AnalystRolePolicy
+
+    - name: AnalystPermission:/organizations/{org_id}/extension/key-id
+      resource: /organizations/{org_id}/extension/key-id
+      scopes:
+        - GET
+      policies:
+        - AnalystRolePolicy
+
+
+    # deployment admin
+    - name: DeploymentAdminPermission:/organizations/{org_id}/extension/trusted-domains
+      resource: /organizations/{org_id}/extension/trusted-domains
+      scopes:
+        - GET
+        - POST
+        - DELETE
+      policies:
+        - DeploymentAdminRolePolicy
+
+    - name: DeploymentAdminPermission:/organizations/{org_id}/extension/mmguard-config
+      resource: /organizations/{org_id}/extension/mmguard-config
+      scopes:
+        - GET
+        - POST
+        - DELETE
+      policies:
+        - DeploymentAdminRolePolicy
+
+    - name: DeploymentAdminPermission:/organizations/{org_id}/extension/token
+      resource: /organizations/{org_id}/extension/token
+      scopes:
+        - GET
+        - POST
+        - DELETE
+      policies:
+        - DeploymentAdminRolePolicy
+
+    - name: DeploymentAdminPermission:/organizations/{org_id}/extension/key-id
+      resource: /organizations/{org_id}/extension/key-id
+      scopes:
+        - GET
+        - POST
+        - DELETE
+      policies:
+        - DeploymentAdminRolePolicy
+
+    # browser user
+    - name: BrowserUserPermission:/organizations/{org_id}/extension/mmguard-config
+      resource: /organizations/{org_id}/extension/mmguard-config
+      scopes:
+        - GET
+      policies:
+        - BrowserUserRolePolicy
+
+    - name: BrowserUserPermission:/organizations/{org_id}/extension/token
+      resource: /organizations/{org_id}/extension/token
+      scopes:
+        - GET
+      policies:
+        - BrowserUserRolePolicy
+
+    - name: BrowserUserPermission:/organizations/{org_id}/extension/key-id
+      resource: /organizations/{org_id}/extension/key-id
+      scopes:
+        - GET
+      policies:
+        - BrowserUserRolePolicy

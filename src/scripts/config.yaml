@@ -1,0 +1,1912 @@
+keycloak:
+  client: empower
+  permissions:
+    - name: BrowserUserPermission:auth/ui
+      policies:
+        - BrowserUserRolePolicy
+      resource: auth/ui
+      scopes:
+        - GET
+    - name: BrowserUserPermission:auth/logout
+      policies:
+        - BrowserUserRolePolicy
+      resource: auth/logout
+      scopes:
+        - GET
+    - name: BrowserUserPermission:organizations/{org_id}
+      policies:
+        - BrowserUserRolePolicy
+      resource: organizations/{org_id}
+      scopes:
+        - GET
+    - name: BrowserUserPermission:organizations/{org_id}/tenants
+      policies:
+        - BrowserUserRolePolicy
+      resource: organizations/{org_id}/tenants
+      scopes:
+        - GET
+    - name: BrowserUserPermission:organizations/{org_id}/tenants/{tenant_id}
+      policies:
+        - BrowserUserRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}
+      scopes:
+        - GET
+    - name: BrowserUserPermission:organizations/{org_id}/users/{user_id}
+      policies:
+        - BrowserUserRolePolicy
+      resource: organizations/{org_id}/users/{user_id}
+      scopes:
+        - GET
+    - name: BrowserUserPermission:organizations/{org_id}/users/{user_id}/roles
+      policies:
+        - BrowserUserRolePolicy
+      resource: organizations/{org_id}/users/{user_id}/roles
+      scopes:
+        - GET
+    - name: ViewerPermission:auth/ui
+      policies:
+        - ViewerRolePolicy
+      resource: auth/ui
+      scopes:
+        - GET
+    - name: ViewerPermission:auth/logout
+      policies:
+        - ViewerRolePolicy
+      resource: auth/logout
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/tenants
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/tenants
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/tenants/{tenant_id}
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/users/{user_id}
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/users/{user_id}
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/users/{user_id}/roles
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/users/{user_id}/roles
+      scopes:
+        - GET
+    - name: ViewerPermission:meta/notifications/types
+      policies:
+        - ViewerRolePolicy
+      resource: meta/notifications/types
+      scopes:
+        - GET
+    - name: ViewerPermission:meta/integrations
+      policies:
+        - ViewerRolePolicy
+      resource: meta/integrations
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/groups
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/groups
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/groups/{group_id}
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/groups/{group_id}/roles
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}/roles
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/tenants/{tenant_id}/notifications
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/tenants/{tenant_id}/extension/trusted-domains
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/trusted-domains
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices-count
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices-count
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/tenants/{tenant_id}/integrations
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/healthchecks
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/healthchecks
+      scopes:
+        - GET
+    - name: ViewerPermission:organizations/{org_id}/alerts/raw
+      policies:
+        - ViewerRolePolicy
+      resource: organizations/{org_id}/alerts/raw
+      scopes:
+        - GET
+    - name: AnalystPermission:auth/ui
+      policies:
+        - AnalystRolePolicy
+      resource: auth/ui
+      scopes:
+        - GET
+    - name: AnalystPermission:auth/logout
+      policies:
+        - AnalystRolePolicy
+      resource: auth/logout
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/users/{user_id}
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/users/{user_id}
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/users/{user_id}/roles
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/users/{user_id}/roles
+      scopes:
+        - GET
+    - name: AnalystPermission:meta/notifications/types
+      policies:
+        - AnalystRolePolicy
+      resource: meta/notifications/types
+      scopes:
+        - GET
+    - name: AnalystPermission:meta/integrations
+      policies:
+        - AnalystRolePolicy
+      resource: meta/integrations
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/groups
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/groups
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/groups/{group_id}
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/groups/{group_id}/roles
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}/roles
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/notifications
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/extension/trusted-domains
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/trusted-domains
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices-count
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices-count
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/integrations
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/healthchecks
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/healthchecks
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/summary
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/summary
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/summary
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/summary
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/detail
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/detail
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/{resource_id}/drift/detail
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/{resource_id}/drift/detail
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/detail
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/detail
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/trigger
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/trigger
+      scopes:
+        - POST
+    - name: AnalystPermission:organizations/{org_id}/alerts/raw
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/alerts/raw
+      scopes:
+        - POST
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/extension/browser-metadata
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/browser-metadata
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/events/{event_id}/extension/artifact
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/events/{event_id}/extension/artifact
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/extension/mmguard-config
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/mmguard-config
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/activity
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/activity
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/status/count
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/status/count
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/schedule
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/schedule
+      scopes:
+        - GET
+    - name: AnalystPermission:organizations/{org_id}/insights
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/insights
+      scopes:
+        - POST
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/integration-stats
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integration-stats
+      scopes:
+        - GET
+        - POST
+    - name: AnalystPermission:organizations/{org_id}/tenants/{tenant_id}/timestream
+      policies:
+        - AnalystRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/timestream
+      scopes:
+        - POST
+    - name: DeploymentAdminPermission:auth/ui
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: auth/ui
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:auth/logout
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: auth/logout
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/users
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/users
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/users/{user_id}
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/users/{user_id}
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/users/{user_id}/roles
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/users/{user_id}/roles
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:meta/notifications/types
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: meta/notifications/types
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:meta/integrations
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: meta/integrations
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:meta/integrations/{integration_name}/auth_schema
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: meta/integrations/{integration_name}/auth_schema
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:meta/identity-provider/configs
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: meta/identity-provider/configs
+      scopes:
+        - POST
+    - name: DeploymentAdminPermission:meta/cloud-integrations/{integration_type}/template
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: meta/cloud-integrations/{integration_type}/template
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/groups
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/groups
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/groups/{group_id}
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/groups/{group_id}/roles
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}/roles
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/notifications
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications
+      scopes:
+        - GET
+        - POST
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}
+      scopes:
+        - GET
+        - PUT
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/trusted-domains
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/trusted-domains
+      scopes:
+        - GET
+        - POST
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices-count
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices-count
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}
+      scopes:
+        - PUT
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scans
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scans
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scan/start
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scan/start
+      scopes:
+        - POST
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/configs
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/configs
+      scopes:
+        - PUT
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/callback-url
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/callback-url
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/onboard
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/onboard
+      scopes:
+        - POST
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/auth_details
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/auth_details
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/healthchecks
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/healthchecks
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/summary
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/summary
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/summary
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/summary
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/detail
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/detail
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/{resource_id}/drift/detail
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/{resource_id}/drift/detail
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/detail
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/detail
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/trigger
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/trigger
+      scopes:
+        - POST
+    - name: DeploymentAdminPermission:organizations/{org_id}/alerts/raw
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/alerts/raw
+      scopes:
+        - POST
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/browser-metadata
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/browser-metadata
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/events/{event_id}/extension/artifact
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/events/{event_id}/extension/artifact
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/mmguard-config
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/mmguard-config
+      scopes:
+        - GET
+        - POST
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/activity
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/activity
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/status/count
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/status/count
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/schedule
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/schedule
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/insights
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/insights
+      scopes:
+        - POST
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integration-stats
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integration-stats
+      scopes:
+        - GET
+        - POST
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/timestream
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/timestream
+      scopes:
+        - POST
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/notifications/slack/callback_url
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications/slack/callback_url
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}/send_test
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}/send_test
+      scopes:
+        - POST
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/generate-token
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/generate-token
+      scopes:
+        - POST
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/get-token
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/get-token
+      scopes:
+        - GET
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/send-email
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/send-email
+      scopes:
+        - POST
+
+    - name: DeploymentAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/metadata
+      policies:
+        - DeploymentAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/metadata
+      scopes:
+        - GET
+        
+    - name: OrgAdminPermission:auth/ui
+      policies:
+        - OrgAdminRolePolicy
+      resource: auth/ui
+      scopes:
+        - GET
+    - name: OrgAdminPermission:auth/logout
+      policies:
+        - OrgAdminRolePolicy
+      resource: auth/logout
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}
+      scopes:
+        - GET
+        - PUT
+    - name: OrgAdminPermission:organizations/{org_id}/tenants
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants
+      scopes:
+        - GET
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}
+      scopes:
+        - GET
+        - PUT
+    - name: OrgAdminPermission:organizations/{org_id}/users
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/users
+      scopes:
+        - GET
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/users/{user_id}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/users/{user_id}
+      scopes:
+        - DELETE
+        - GET
+        - PUT
+    - name: OrgAdminPermission:organizations/{org_id}/users/reset-password
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/users/reset-password
+      scopes:
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/users/{user_id}/roles
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/users/{user_id}/roles
+      scopes:
+        - GET
+    - name: OrgAdminPermission:meta/notifications/types
+      policies:
+        - OrgAdminRolePolicy
+      resource: meta/notifications/types
+      scopes:
+        - GET
+    - name: OrgAdminPermission:meta/integrations
+      policies:
+        - OrgAdminRolePolicy
+      resource: meta/integrations
+      scopes:
+        - GET
+    - name: OrgAdminPermission:meta/integrations/{integration_name}/auth_schema
+      policies:
+        - OrgAdminRolePolicy
+      resource: meta/integrations/{integration_name}/auth_schema
+      scopes:
+        - GET
+    - name: OrgAdminPermission:meta/identity-provider/configs
+      policies:
+        - OrgAdminRolePolicy
+      resource: meta/identity-provider/configs
+      scopes:
+        - POST
+    - name: OrgAdminPermission:meta/cloud-integrations/{integration_type}/template
+      policies:
+        - OrgAdminRolePolicy
+      resource: meta/cloud-integrations/{integration_type}/template
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/users/{user_id}/roles/{role_id}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/users/{user_id}/roles/{role_id}
+      scopes:
+        - DELETE
+        - PUT
+    - name: OrgAdminPermission:organizations/{org_id}/groups
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/groups
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/groups/{group_id}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/groups/{group_id}/members/{member_id}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}/members/{member_id}
+      scopes:
+        - DELETE
+        - PUT
+    - name: OrgAdminPermission:organizations/{org_id}/groups/{group_id}/roles
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}/roles
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/groups/{group_id}/roles/{role_id}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}/roles/{role_id}
+      scopes:
+        - DELETE
+        - PUT
+    - name: OrgAdminPermission:organizations/{org_id}/roles
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/roles
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/roles/{role_id}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/roles/{role_id}
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/insights
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/insights
+      scopes:
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integration-stats
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integration-stats
+      scopes:
+        - GET
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/timestream
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/timestream
+      scopes:
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/notifications
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications
+      scopes:
+        - GET
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/notifications/slack/callback_url
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications/slack/callback_url
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}
+      scopes:
+        - GET
+        - PUT
+        - DELETE
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}/send_test
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}/send_test
+      scopes:
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/trusted-domains
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/trusted-domains
+      scopes:
+        - GET
+        - POST
+        - DELETE
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/generate-token
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/generate-token
+      scopes:
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/get-token
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/get-token
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices-count
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices-count
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/send-email
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/send-email
+      scopes:
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/events/{event_id}/extension/artifact
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/events/{event_id}/extension/artifact
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/browser-metadata
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/browser-metadata
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/mmguard-config
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/mmguard-config
+      scopes:
+        - GET
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/callback-url
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/callback-url
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/onboard
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/onboard
+      scopes:
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/auth_details
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/auth_details
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/activity
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/activity
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/status/count
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/status/count
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}
+      scopes:
+        - DELETE
+        - PUT
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/healthchecks
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/healthchecks
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scans
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scans
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scan/start
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scan/start
+      scopes:
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/schedule
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/schedule
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/activity
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/activity
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/retro/logs
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/retro/logs
+      scopes:
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/retro/logs/config
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/retro/logs/config
+      scopes:
+        - GET
+        - POST
+        - PUT
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/{action}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/{action}
+      scopes:
+        - PUT
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/service/{action}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/service/{action}
+      scopes:
+        - PUT
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/summary
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/summary
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/summary
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/summary
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/detail
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/detail
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/{resource_id}/drift/detail
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/{resource_id}/drift/detail
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/detail
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/detail
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/trigger
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/trigger
+      scopes:
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/alerts/raw
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/alerts/raw
+      scopes:
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/identity-providers
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/identity-providers
+      scopes:
+        - GET
+        - POST
+    - name: OrgAdminPermission:organizations/{org_id}/identity-providers/init
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/identity-providers/init
+      scopes:
+        - GET
+    - name: OrgAdminPermission:organizations/{org_id}/identity-providers/{idp_alias}
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/identity-providers/{idp_alias}
+      scopes:
+        - DELETE
+        - PUT
+    - name: OrgAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/metadata
+      policies:
+        - OrgAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/metadata
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:auth/ui
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: auth/ui
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:auth/logout
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: auth/logout
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}
+      scopes:
+        - GET
+        - PUT
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants
+      scopes:
+        - GET
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}
+      scopes:
+        - GET
+        - PUT
+    - name: OrgRootAdminPermission:organizations/{org_id}/users
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/users
+      scopes:
+        - GET
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/users/{user_id}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/users/{user_id}
+      scopes:
+        - DELETE
+        - GET
+        - PUT
+    - name: OrgRootAdminPermission:organizations/{org_id}/users/reset-password
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/users/reset-password
+      scopes:
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/users/{user_id}/roles
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/users/{user_id}/roles
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:meta/notifications/types
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: meta/notifications/types
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:meta/integrations
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: meta/integrations
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:meta/integrations/{integration_name}/auth_schema
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: meta/integrations/{integration_name}/auth_schema
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:meta/identity-provider/configs
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: meta/identity-provider/configs
+      scopes:
+        - POST
+    - name: OrgRootAdminPermission:meta/cloud-integrations/{integration_type}/template
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: meta/cloud-integrations/{integration_type}/template
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/users/{user_id}/roles/{role_id}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/users/{user_id}/roles/{role_id}
+      scopes:
+        - DELETE
+        - PUT
+    - name: OrgRootAdminPermission:organizations/{org_id}/groups
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/groups
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/groups/{group_id}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/groups/{group_id}/members/{member_id}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}/members/{member_id}
+      scopes:
+        - DELETE
+        - PUT
+    - name: OrgRootAdminPermission:organizations/{org_id}/groups/{group_id}/roles
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}/roles
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/groups/{group_id}/roles/{role_id}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/groups/{group_id}/roles/{role_id}
+      scopes:
+        - DELETE
+        - PUT
+    - name: OrgRootAdminPermission:organizations/{org_id}/roles
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/roles
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/roles/{role_id}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/roles/{role_id}
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/insights
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/insights
+      scopes:
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integration-stats
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integration-stats
+      scopes:
+        - GET
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/timestream
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/timestream
+      scopes:
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/notifications
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications
+      scopes:
+        - GET
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/notifications/slack/callback_url
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications/slack/callback_url
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}
+      scopes:
+        - GET
+        - PUT
+        - DELETE
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}/send_test
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}/send_test
+      scopes:
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/trusted-domains
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/trusted-domains
+      scopes:
+        - GET
+        - POST
+        - DELETE
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/generate-token
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/generate-token
+      scopes:
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/get-token
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/get-token
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices-count
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices-count
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/send-email
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/send-email
+      scopes:
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/events/{event_id}/extension/artifact
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/events/{event_id}/extension/artifact
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/browser-metadata
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/browser-metadata
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/extension/mmguard-config
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/extension/mmguard-config
+      scopes:
+        - GET
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/callback-url
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/callback-url
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/onboard
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/onboard
+      scopes:
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/auth_details
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/auth_details
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/activity
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/activity
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/status/count
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/status/count
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}
+      scopes:
+        - DELETE
+        - PUT
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/healthchecks
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/healthchecks
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scans
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scans
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scan/start
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scan/start
+      scopes:
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/schedule
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/schedule
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/activity
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/activity
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/retro/logs
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/retro/logs
+      scopes:
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/retro/logs/config
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/retro/logs/config
+      scopes:
+        - GET
+        - POST
+        - PUT
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/{action}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/{action}
+      scopes:
+        - PUT
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/service/{action}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/service/{action}
+      scopes:
+        - PUT
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/summary
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/summary
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/summary
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/summary
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/detail
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/detail
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/{resource_id}/drift/detail
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/{resource_id}/drift/detail
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/detail
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/detail
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/trigger
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/trigger
+      scopes:
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/alerts/raw
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/alerts/raw
+      scopes:
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/identity-providers
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/identity-providers
+      scopes:
+        - GET
+        - POST
+    - name: OrgRootAdminPermission:organizations/{org_id}/identity-providers/init
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/identity-providers/init
+      scopes:
+        - GET
+    - name: OrgRootAdminPermission:organizations/{org_id}/identity-providers/{idp_alias}
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/identity-providers/{idp_alias}
+      scopes:
+        - DELETE
+        - PUT
+    - name: OrgRootAdminPermission:organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/metadata
+      policies:
+        - OrgRootAdminRolePolicy
+      resource: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/metadata
+      scopes:
+        - GET
+  policies:
+    custom_policies:
+      - name: OrganizationScopePolicy
+        type: script-organization-policy.js
+      - name: DefaultDenyPolicy
+        type: script-default-deny-policy.js
+    role_policies:
+      - name: BrowserUserRolePolicy
+        roles:
+          - client-role-browser-extension-user
+      - name: ViewerRolePolicy
+        roles:
+          - client-role-viewer
+      - name: AnalystRolePolicy
+        roles:
+          - client-role-analyst
+      - name: DeploymentAdminRolePolicy
+        roles:
+          - client-role-deployment-admin
+      - name: OrgAdminRolePolicy
+        roles:
+          - client-role-org-admin
+      - name: OrgRootAdminRolePolicy
+        roles:
+          - client-role-org-root-admin
+  resources:
+    - name: meta/notifications/types
+      scopes:
+        - GET
+      uris:
+        - meta/notifications/types
+    - name: meta/integrations
+      scopes:
+        - GET
+      uris:
+        - meta/integrations
+    - name: meta/integrations/{integration_name}/auth_schema
+      scopes:
+        - GET
+      uris:
+        - meta/integrations/{integration_name}/auth_schema
+    - name: meta/identity-provider/configs
+      scopes:
+        - POST
+      uris:
+        - meta/identity-provider/configs
+    - name: meta/cloud-integrations/{integration_type}/template
+      scopes:
+        - GET
+      uris:
+        - meta/cloud-integrations/{integration_type}/template
+    - name: auth/logout
+      scopes:
+        - GET
+      uris:
+        - auth/logout
+    - name: auth/ui
+      scopes:
+        - GET
+      uris:
+        - auth/ui
+    - name: organizations/{org_id}
+      scopes:
+        - DELETE
+        - GET
+        - PUT
+      uris:
+        - organizations/{org_id}
+    - name: organizations/{org_id}/tenants
+      scopes:
+        - GET
+        - POST
+      uris:
+        - organizations/{org_id}/tenants
+    - name: organizations/{org_id}/tenants/{tenant_id}
+      scopes:
+        - GET
+        - PUT
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}
+    - name: organizations/{org_id}/users
+      scopes:
+        - GET
+        - POST
+      uris:
+        - organizations/{org_id}/users
+    - name: organizations/{org_id}/users/root-user
+      scopes:
+        - POST
+      uris:
+        - organizations/{org_id}/users/root-user
+    - name: organizations/{org_id}/users/reset-password
+      scopes:
+        - POST
+      uris:
+        - organizations/{org_id}/users/reset-password
+    - name: organizations/{org_id}/users/{user_id}
+      scopes:
+        - DELETE
+        - GET
+        - PUT
+      uris:
+        - organizations/{org_id}/users/{user_id}
+    - name: organizations/{org_id}/users/{user_id}/roles
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/users/{user_id}/roles
+    - name: organizations/{org_id}/users/{user_id}/roles/{role_id}
+      scopes:
+        - DELETE
+        - PUT
+      uris:
+        - organizations/{org_id}/users/{user_id}/roles/{role_id}
+    - name: organizations/{org_id}/groups
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/groups
+    - name: organizations/{org_id}/groups/{group_id}
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/groups/{group_id}
+    - name: organizations/{org_id}/groups/{group_id}/members/{member_id}
+      scopes:
+        - DELETE
+        - PUT
+      uris:
+        - organizations/{org_id}/groups/{group_id}/members/{member_id}
+    - name: organizations/{org_id}/groups/{group_id}/roles
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/groups/{group_id}/roles
+    - name: organizations/{org_id}/groups/{group_id}/roles/{role_id}
+      scopes:
+        - DELETE
+        - PUT
+      uris:
+        - organizations/{org_id}/groups/{group_id}/roles/{role_id}
+    - name: organizations/{org_id}/roles
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/roles
+    - name: organizations/{org_id}/roles/{role_id}
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/roles/{role_id}
+    - name: organizations/{org_id}/insights
+      scopes:
+        - POST
+      uris:
+        - organizations/{org_id}/insights
+    - name: organizations/{org_id}/tenants/{tenant_id}/integration-stats
+      scopes:
+        - GET
+        - POST
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integration-stats
+    - name: organizations/{org_id}/tenants/{tenant_id}/timestream
+      scopes:
+        - POST
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/timestream
+    - name: organizations/{org_id}/tenants/{tenant_id}/notifications
+      scopes:
+        - GET
+        - POST
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/notifications
+    - name: organizations/{org_id}/tenants/{tenant_id}/notifications/slack/callback_url
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/notifications/slack/callback_url
+    - name: organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}
+      scopes:
+        - DELETE
+        - GET
+        - PUT
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}
+    - name: organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}/send_test
+      scopes:
+        - POST
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/notifications/{notification_type}/{notification_id}/send_test
+    - name: organizations/{org_id}/tenants/{tenant_id}/extension/trusted-domains
+      scopes:
+        - DELETE
+        - GET
+        - POST
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/extension/trusted-domains
+    - name: organizations/{org_id}/tenants/{tenant_id}/extension/generate-token
+      scopes:
+        - POST
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/extension/generate-token
+    - name: organizations/{org_id}/tenants/{tenant_id}/extension/get-token
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/extension/get-token
+    - name: organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices
+    - name: organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices-count
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/extension/enrolled-devices-count
+    - name: organizations/{org_id}/tenants/{tenant_id}/extension/send-email
+      scopes:
+        - POST
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/extension/send-email
+    - name: organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/events/{event_id}/extension/artifact
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/events/{event_id}/extension/artifact
+    - name: organizations/{org_id}/tenants/{tenant_id}/extension/browser-metadata
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/extension/browser-metadata
+    - name: organizations/{org_id}/tenants/{tenant_id}/extension/mmguard-config
+      scopes:
+        - GET
+        - POST
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/extension/mmguard-config
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/configs
+      scopes:
+        - PUT
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/configs
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/callback-url
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/callback-url
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/onboard
+      scopes:
+        - POST
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/onboard
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/auth_details
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/auth_details
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/activity
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/activity
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/status/count
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/status/count
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}
+      scopes:
+        - DELETE
+        - PUT
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/healthchecks
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/healthchecks
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scans
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scans
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scan/start
+      scopes:
+        - POST
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/scan/start
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/schedule
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/schedule
+    - name: organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/activity
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/users/{user_id}/activity
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/retro/logs
+      scopes:
+        - POST
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/retro/logs
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/retro/logs/config
+      scopes:
+        - GET
+        - POST
+        - PUT
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/retro/logs/config
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/{action}
+      scopes:
+        - PUT
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/{action}
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/service/{action}
+      scopes:
+        - PUT
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_id}/service/{action}
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/summary
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/summary
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/summary
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/summary
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/detail
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/detail
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/{resource_id}/drift/detail
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/{resource_id}/drift/detail
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/detail
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/scans/{scan_id}/drift/detail
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/trigger
+      scopes:
+        - POST
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/drift/trigger
+    - name: organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/metadata
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/tenants/{tenant_id}/integrations/{integration_type}/{integration_id}/resources/metadata
+    - name: organizations/{org_id}/alerts/raw
+      scopes:
+        - POST
+      uris:
+        - organizations/{org_id}/alerts/raw
+    - name: organizations/{org_id}/identity-providers
+      scopes:
+        - GET
+        - POST
+      uris:
+        - organizations/{org_id}/identity-providers
+    - name: organizations/{org_id}/identity-providers/init
+      scopes:
+        - GET
+      uris:
+        - organizations/{org_id}/identity-providers/init
+    - name: organizations/{org_id}/identity-providers/{idp_alias}
+      scopes:
+        - DELETE
+        - PUT
+      uris:
+        - organizations/{org_id}/identity-providers/{idp_alias}
+
+  scopes:
+    - description: Read access.
+      name: GET
+    - description: Create access.
+      name: POST
+    - description: Update access.
+      name: PUT
+    - description: Delete access.
+      name: DELETE
+    - description: Partial Update access.
+      name: PATCH

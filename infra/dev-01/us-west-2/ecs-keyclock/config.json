@@ -1,0 +1,190 @@
+{
+  "name": "empower-auth-keycloak",
+  "family": "empower-auth-keycloak",
+  "vpc_id": "",
+  "subnet_ids": "",
+  "listener_arn": "",
+  "cluster_arn": "",
+  "load_balancer_arn": "arn:aws:elasticloadbalancing:us-west-2:637423201724:loadbalancer/app/merumesh-alb/6b06472b426f7aa4",
+  "launch_type": "FARGATE",
+  "network_mode": "awsvpc",
+  "desired_count": 1,
+  "create_listener": true,
+  "enable_autoscaling": false,
+  "assign_public_ip": false,
+  "listener_rules_enabled": true,
+  "autoscaling_policies": [
+    {
+      "name": "cpu-reservation",
+      "type": "TargetTrackingScaling",
+      "target_value": 75.0,
+      "predefined_metric_specification": {
+        "predefined_metric_type": "ECSServiceAverageCPUUtilization"
+      }
+    }
+  ],
+  "runtime_platform": {
+    "operating_system_family": "LINUX",
+    "cpu_architecture": "X86_64"
+  },
+  "container_definitions": [
+    {
+      "name": "empower-auth-keycloak",
+      "image": "211125324484.dkr.ecr.us-west-2.amazonaws.com/auth-keyclock:latest",
+      "command": ["start", "--cache=ispn"],
+      "cpu": 0,
+      "port_mappings": [
+        {
+          "name": "http",
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "readonly_root_filesystem": false,
+      "essential": true,
+      "environment": [
+        {
+          "name": "KC_HOSTNAME",
+          "value": "https://dev-01.auth.identra.ai"
+        },
+        {
+          "name": "KC_HTTP_ENABLED",
+          "value": "true"
+        },
+        {
+          "name": "KC_HEALTH_ENABLED",
+          "value": "true"
+        },
+        {
+          "name": "KC_FEATURES",
+          "value": "scripts"
+        },
+        {
+          "name": "KC_LOGGING_CONSOLE_LEVEL",
+          "value": "INFO"
+        },
+        {
+          "name": "KC_LOGGING_CATEGORIES",
+          "value": "org.keycloak.provider: INFO"
+        }
+      ],
+      "secrets": [
+        {
+          "name": "KC_DB_URL",
+          "valueFrom": "arn:aws:secretsmanager:us-west-2:211125324484:secret:keyclock/db/creds-niip6N:KC_DB_URL::"
+        },
+        {
+          "name": "KC_DB",
+          "valueFrom": "arn:aws:secretsmanager:us-west-2:211125324484:secret:keyclock/db/creds-niip6N:KC_DB::"
+        },
+        {
+          "name": "KC_DB_USERNAME",
+          "valueFrom": "arn:aws:secretsmanager:us-west-2:211125324484:secret:keyclock/db/creds-niip6N:KC_DB_USERNAME::"
+        },
+        {
+          "name": "KC_DB_PASSWORD",
+          "valueFrom": "arn:aws:secretsmanager:us-west-2:211125324484:secret:keyclock/db/creds-niip6N:KC_DB_PASSWORD::"
+        },
+        {
+          "name": "KEYCLOAK_ADMIN_PASSWORD",
+          "valueFrom": "arn:aws:secretsmanager:us-west-2:211125324484:secret:keyclock/db/creds-niip6N:KEYCLOAK_ADMIN_PASSWORD::"
+        },
+        {
+          "name": "KEYCLOAK_ADMIN",
+          "valueFrom": "arn:aws:secretsmanager:us-west-2:211125324484:secret:keyclock/db/creds-niip6N:KEYCLOAK_ADMIN::"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/empower-auth-keycloak",
+          "awslogs-create-group": "true",
+          "awslogs-region": "us-west-2",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": []
+      },
+      "systemControls": []
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "tasks_iam_role_statements": [
+    {
+      "actions": [
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:BatchGetImage",
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:GetAuthorizationToken",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "resources": ["*"]
+    }
+  ],
+  "cpu": "1024",
+  "memory": "2048",
+  "container_port": 8080,
+  "service_connect_configuration": {
+    "enabled": true,
+    "namespace": "",
+    "service": {
+      "client_alias": {
+        "port": 8080,
+        "dns_name": "empower-auth-keycloak"
+      },
+      "port_name": "http",
+      "discovery_name": "empower-auth-keycloak"
+    }
+  },
+  "path": "/resources/master/admin/en",
+  "matcher": 200,
+  "port": 5000,
+  "target_port": 8080,
+  "listener_rules": [
+    {
+      "priority": 1,
+      "conditions": [
+        {
+          "path_patterns": ["/"]
+        }
+      ]
+    }
+  ],
+  "load_balancer": {
+    "target_group_arn": "",
+    "container_name": "empower-auth-keycloak",
+    "container_port": 8080
+  },
+  "security_group_rules": {
+    "ingress": {
+      "type": "ingress",
+      "from_port": 8080,
+      "to_port": 8080,
+      "protocol": "tcp",
+      "description": "Service port",
+      "cidr_blocks": ["0.0.0.0/0"]
+    },
+    "ingress_alb": {
+      "type": "ingress",
+      "from_port": 5000,
+      "to_port": 5000,
+      "protocol": "tcp",
+      "description": "alb serivce",
+      "source_security_group_id": "sg-05504699dce08cb2f"
+    },
+    "egress": {
+      "type": "egress",
+      "from_port": 0,
+      "to_port": 0,
+      "protocol": "-1",
+      "cidr_blocks": ["0.0.0.0/0"],
+      "description": "Service port"
+    }
+  },
+  "task_exec_iam_role_policies": {
+    "ecs-task-exec-role-policy": "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy",
+    "rds-full-access": "arn:aws:iam::aws:policy/AmazonRDSFullAccess"
+  }
+}

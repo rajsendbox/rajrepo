@@ -1,0 +1,15 @@
+{
+    "secrets": [{
+      "name": "keyclock/admin/creds",
+      "description": "This is a secret",
+      "secret_string": {
+        "KEYCLOAK_ADMIN":"",
+        "KEYCLOAK_ADMIN_PASSWORD":""
+      },
+      "tags": {
+        "environment": ""
+      }
+    }
+  ]
+  }
+  

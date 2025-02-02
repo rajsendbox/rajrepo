@@ -1,0 +1,43 @@
+[
+  {
+    "id": "2748fc75-ebe5-4f70-9f5b-1ce60522dc9c",
+    "path": "organizations/{org_id}/extension/trusted-domains",
+    "methods": [
+      "DELETE",
+      "GET",
+      "POST"
+    ],
+    "name": "empower",
+    "description": "Manage resource at organizations/{org_id}/extension/trusted-domains"
+  },
+  {
+    "id": "c1295d6e-f9b6-44e7-86a6-3cd1b5beae0f",
+    "path": "organizations/{org_id}/extension/mmguard-config",
+    "methods": [
+      "DELETE",
+      "GET",
+      "POST"
+    ],
+    "name": "empower",
+    "description": "Manage resource at organizations/{org_id}/extension/mmguard-config"
+  },
+  {
+    "id": "5c1a7ae5-b594-452c-ac61-45c18e3f8f7d",
+    "path": "organizations/{org_id}/extension/token",
+    "methods": [
+      "GET",
+      "POST"
+    ],
+    "name": "empower",
+    "description": "Manage resource at organizations/{org_id}/extension/token"
+  },
+  {
+    "id": "49988e99-7b56-4daf-b4b3-8c5ec385a616",
+    "path": "organizations/{org_id}/extension/key-id",
+    "methods": [
+      "GET"
+    ],
+    "name": "empower",
+    "description": "Manage resource at organizations/{org_id}/extension/key-id"
+  }
+]

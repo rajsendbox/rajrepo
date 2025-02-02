@@ -1,0 +1,52 @@
+realms:
+  - name: merumesh-production
+    displayName: Merumesh Production
+    secretManager: keyclock/admin/creds
+    enabled:
+    defaultGroup: browser-extension-user
+    groups:
+      - name: analyst
+        roles:
+          - client: client-role-analyst
+      - name: browser-extension-user
+        roles:
+          - client: client-role-browser-extension-user
+      - name: viewer
+        roles:
+          - client: client-role-viewer
+      - name: customer-org-admin
+        roles:
+          - client: client-role-org-admin
+      - name: customer-org-root-admin
+        roles:
+          - client: client-role-org-root-admin
+      - name: deployment-admin
+        roles:
+          - client: client-role-deployment-admin
+    roles:
+      realm:
+      client:
+        empower:
+          - name: client-role-analyst
+            description: client-role-analyst
+          - name: client-role-browser-extension-user
+            description: client-role-browser-extension-user
+          - name: client-role-viewer
+            description: client-role-viewer
+          - name: client-role-org-admin
+            description: client-role-org-admin
+          - name: client-role-org-root-admin
+            description: client-role-org-root-admin
+          - name: client-role-deployment-admin
+            description: client-role-deployment-admin
+    clients:
+      - clientId: empower
+        name: empower
+        enabled: true
+        publicClient: true
+        redirectUris:
+          - "https://example.com/*"
+        webOrigins:
+          - "*"
+        defaultRoles:
+          - client-role-browser-extension-user
