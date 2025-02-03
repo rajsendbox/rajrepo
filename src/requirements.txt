@@ -1,5 +1,0 @@
-requests
-PyYAML
-python-keycloak
-python-dotenv
-boto3

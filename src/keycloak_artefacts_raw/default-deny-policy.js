@@ -1,2 +1,0 @@
-// Deny poly
-$evaluation.deny();
